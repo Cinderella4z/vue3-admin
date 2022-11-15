@@ -1,0 +1,61 @@
+export interface IRouter{
+  id:number,
+  pid:number,
+  path:string,
+  link?:string,
+  name:string,
+  title:string,
+  children?:IRouter[],
+  redirect?:string
+}
+
+export const router:IRouter[]=[
+  {
+    id:2,
+    pid:0,
+    path:'/course',
+    name:'Course',
+    title:'课程管理',
+  },
+  {
+    id:3,
+    pid:2,
+    path:'/operate',
+    name:'Operate',
+    title:'课程操作',
+  },
+  {
+    id:4,
+    pid:3,
+    path:'/course_data',
+    name:'Course_data',
+    title:'课程数据',
+  },
+  {
+    id:5,
+    pid:2,
+    path:'/addCourse',
+    name:'addCourse',
+    title:'增加课程',
+  },
+  {
+    id:6,
+    pid:0,
+    path:'/Student',
+    name:'addCourse',
+    title:'增加课程',
+  },
+  {
+    id:7,
+    pid:6,
+    path:'/Student_operate',
+    name:'Student_operate',
+    title:'学生操作',
+  }, {
+    id:8,
+    pid:6,
+    path:'/addStudent',
+    name:'addStudent',
+    title:'增加学生',
+  },
+]
